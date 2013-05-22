@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BalloonShooter")]
+[assembly: AssemblyTitle("WindowsFormsApplication2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BalloonShooter")]
+[assembly: AssemblyProduct("WindowsFormsApplication2")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("aaee4bf5-6189-46d2-b719-03e8a24a42aa")]
+[assembly: Guid("caccae67-7270-4a56-a21a-70290634f8c2")]
 
 // Version information for an assembly consists of the following four values:
 //

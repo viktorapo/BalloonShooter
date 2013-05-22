@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BalloonShooter
+namespace WindowsFormsApplication2
 {
     static class Program
     {
@@ -15,7 +16,7 @@ namespace BalloonShooter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BalloonShooter());
+            Application.Run(new Menu());
         }
     }
 }

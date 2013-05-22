@@ -5,94 +5,120 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 
-namespace BalloonShooter
+namespace WindowsFormsApplication2
 {
-    public partial class BalloonShooter : Form
+    public partial class Form1 : Form
     {
+        int poen = 0;
         Graphics g;
-        Balloon[] baloni = new Balloon[1000];
+        Balon[] baloni=new Balon[1000];
         Timer timer;
         Timer timer1;
         Image img;
         Image img1;
+        Image cimg;
         int brojac = 0;
-
-        public BalloonShooter()
+        int sekundi = 60;
+        int stoperica;
+        public int brzina { get; set; }
+        Timer stop;
+        public Form1(int brzina)
         {
             InitializeComponent();
+            this.brzina = brzina;
+        }
+        
+        public Form1()
+        {
+            InitializeComponent();
+           
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            int xcord = r.Next(0,Width);
+            baloni[brojac] = new Balon(xcord,Height-20,brzina);
+            brojac++;
+        }
+
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            
+            g.DrawImage(img1,0,0);
+            for (int i = 0; i < brojac; i++)
+            {
+                baloni[i].Move();
+                baloni[i].Draw(img, g);      
+            }
+        }
+
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i < brojac; i++)
+            {
+                if ((baloni[i].x < e.X) && (baloni[i].x + 23F>e.X) && (baloni[i].y < e.Y) && (baloni[i].y + 26F > e.Y)) {
+                    baloni[i].visible = false;
+                    poen++;
+                    label1.Text = "" + poen;
+                }
+            }
+        }
+       
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+          
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             this.DoubleBuffered = true;
-            startgame();
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Width = 1000;
-            Height = 520;
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
-            button4.Visible = false;
-            label1.Visible = false;
-            textBox1.Visible = false;
-            startgame();
-        }
-        public void startgame(){
-        g = CreateGraphics();
+            g = CreateGraphics();
             timer = new Timer();
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval =100/30;
+            timer.Interval = brzina ;
             timer.Start();
 
             timer1 = new Timer();
             timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Interval =800;
+            timer1.Interval = 900;
             timer1.Start();
 
-            
-            img = Image.FromFile(@"C:\Users\DELL\Documents\Visual Studio 2010\Projects\BalloonShooter\BalloonShooter\Resources\balloon.png");
-            img1 = Image.FromFile(@"C:\Users\DELL\Documents\Visual Studio 2010\Projects\BalloonShooter\BalloonShooter\Resources\game_background.jpg");
+   //         img = Image.FromFile(@"C:\\Users\\Goran\\Desktop\\balon1.png");
+        //    img1 = Image.FromFile(@"C:\\Users\\Goran\\Desktop\\Sky.jpg");
+            img = Properties.Resources.balon1;
+            img1 = Properties.Resources.Sky;
+            stop = new Timer();
+            stop.Interval = 1000;
+            stop.Tick += stop_Tick;
+            stop.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-            {
-                Random r = new Random();
-                int xcord = r.Next(0,Width);
-                baloni[brojac] = new Balloon(xcord,Height-20,1);
-                brojac++;
-            }
+        void stop_Tick(object sender, EventArgs e)
+        {
+            label2.Text = "" + (++stoperica);
+            if (stoperica == 25)
+                Close();
 
 
-        private void timer_Tick(object sender, EventArgs e)
-            {
+        }
 
-                g.DrawImage(img1,0,0);
-                for (int i = 0; i < brojac; i++)
-                {
-                       baloni[i].Move();
-                        baloni[i].Draw(img, g);
-                }
-            }
-
-
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
-            {
-                for (int i = 0; i < brojac; i++)
-                    {
-                        if ((baloni[i].x < e.X) && (baloni[i].x + 23F>e.X) && (baloni[i].y < e.Y) && (baloni[i].y + 26F > e.Y)) 
-                            {
-                                baloni[i].visible = false;
-                            }
-                    }       
-            }
-    
-        }//form
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer.Stop();
+        }
+ 
     }
-        
+
+}
+
