@@ -1,0 +1,7 @@
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\bin\Debug\BalloonShooter.exe
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\bin\Debug\BalloonShooter.pdb
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\obj\x86\Debug\BalloonShooter.BalloonShooter.resources
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\obj\x86\Debug\BalloonShooter.Properties.Resources.resources
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\obj\x86\Debug\BalloonShooter.csproj.GenerateResource.Cache
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\obj\x86\Debug\BalloonShooter.exe
+c:\users\dell\documents\visual studio 2010\Projects\BalloonShooter\BalloonShooter\obj\x86\Debug\BalloonShooter.pdb
