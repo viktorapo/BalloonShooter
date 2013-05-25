@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Media;
 
 
 namespace WindowsFormsApplication2
@@ -27,10 +28,12 @@ namespace WindowsFormsApplication2
         int stoperica;
         public int brzina { get; set; }
         Timer stop;
+        private SoundPlayer player;
         public Form1(int brzina)
         {
             InitializeComponent();
             this.brzina = brzina;
+            player = new SoundPlayer(@"../../Resources/Sound.wav");
         }
         
         public Form1()
@@ -62,12 +65,14 @@ namespace WindowsFormsApplication2
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
+           player.Play();
             for (int i = 0; i < brojac; i++)
             {
                 if ((baloni[i].x < e.X) && (baloni[i].x + 23F>e.X) && (baloni[i].y < e.Y) && (baloni[i].y + 26F > e.Y)) {
                     baloni[i].visible = false;
                     poen++;
                     label1.Text = "" + poen;
+                    
                 }
             }
         }

@@ -11,3 +11,10 @@ C:\Users\Goran\documents\visual studio 2012\Projects\WindowsFormsApplication2\Wi
 C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\bin\Debug\WindowsFormsApplication2.exe.config
 C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\BalloonShooter.csprojResolveAssemblyReference.cache
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\WindowsFormsApplication2.Menu.resources
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\Goran\Documents\Visual Studio 2012\Projects\BalloonShooter\BalloonShooter\obj\Debug\BalloonShooter.csproj.GenerateResource.Cache
